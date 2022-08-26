@@ -12,12 +12,11 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ⏲️ *Published:* ${publishedTime}
 ⌚ *Duration:* ${durationH}
 👁️ *Views:* ${viewH}
-*JANGAN DISPAMM*
+*JANGAN DISPAMM* `
   [
     ['Audio 🎧', `${usedPrefix}yta ${url} yes`], 
-    ['Video 🎥', `${usedPrefix}ytv ${url} yes`],
-    ['Cancel 🗿', `${usedPrefix}del`]
-  ]`, m)
+    ['Video 🎥', `${usedPrefix}ytv ${url} yes`]
+  ], m)
 }
 handler.help = ['play', 'play2'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
