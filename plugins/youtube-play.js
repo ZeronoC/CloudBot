@@ -13,7 +13,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ⌚ *Duration:* ${durationH}
 👁️ *Views:* ${viewH}
 *JANGAN DISPAMM*
-  `.trim(), author, thumbnail, url, '📺Go To Youtube!', null, null, [
+  ` [
     ['Audio 🎧', `${usedPrefix}yta ${url} yes`], 
     ['Video 🎥', `${usedPrefix}ytv ${url} yes`],
     ['Cancel 🗿', `${usedPrefix}del`]
@@ -24,7 +24,7 @@ handler.tags = ['downloader']
 handler.command = /^play2?$/i
 
 handler.exp = 0
-handler.limit = 3
+handler.limit = 100
 
 export default handler
 
