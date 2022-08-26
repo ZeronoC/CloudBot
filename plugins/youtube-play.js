@@ -5,7 +5,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!vid) throw 'Video/Audio Tidak ditemukan'
   let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
   const url = 'https://www.youtube.com/watch?v=' + videoId
-  await conn.sendHydrated(m.chat, `
+  await conn.sendButton(m.chat, `
 📌 *Title:* ${title}
 🔗 *Url:* ${url}
 🖹 *Description:* ${description}
@@ -13,7 +13,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ⌚ *Duration:* ${durationH}
 👁️ *Views:* ${viewH}
 *JANGAN DISPAMM*
-  `.trim(), author, thumbnail, url, '📺Go To Youtube!', null, null, [
+  `[
     ['Audio 🎧', `${usedPrefix}yta ${url} yes`], 
     ['Video 🎥', `${usedPrefix}ytv ${url} yes`]
   ], m)
