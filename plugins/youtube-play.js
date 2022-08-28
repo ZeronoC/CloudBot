@@ -13,7 +13,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ⌚ *Duration:* ${durationH}
 👁️ *Views:* ${viewH}
 *JANGAN DISPAMM*
-  `.trim(), author, thumbnail, [
+  `.trim(), author, thumbnail, null, null, [
     ['Audio 🎧', `${usedPrefix}yta ${url} yes`], 
     ['Video 🎥', `${usedPrefix}ytv ${url} yes`]
   ], m)
