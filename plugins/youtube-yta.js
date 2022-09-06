@@ -28,10 +28,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 *🗎 Filesize:* ${audio.fileSizeH}
 *${isLimit ? 'Pakai ' : ''}Link:* ${link}
 `.trim(), m)
-  if (!isLimit) conn.sendFile(m.chat, source, title + '.mp3', `
-*📌Title:* ${title}
-*🗎 Filesize:* ${audio.fileSizeH}
-`.trim(), m, null, {
+  if (!isLimit) conn.sendFile(m.chat, source, title + '.mp3', .trim(), m, null, {
     asDocument: true
   })
 }
